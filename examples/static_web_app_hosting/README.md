@@ -14,9 +14,9 @@ After renaming the file `variables.auto.tfvars.example` to `variables.auto.tfvar
 
 ~~~~
 terraform init -backend-config "bucket=YOUR-TFBUCKET" -backend-config "region=us-east-1"  -backend-config "key=PROJECT-NAME/terraform.tfstate"
-
+terraform fmt --recursive
+terraform validate .
 terraform plan -out plan
-
 terraform apply plan
 ~~~~
 
