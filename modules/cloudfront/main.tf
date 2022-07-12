@@ -100,26 +100,7 @@ resource "aws_cloudfront_distribution" "this" {
   }
 
   logging_config {
-    bucket          = "${var.cloudfront_log_bucket}.s3.amazonaws.com"
+    bucket = "${var.cloudfront_log_bucket}.s3.amazonaws.com"
   }
 
-}
-
-# =============================
-#  CLOUDFLARE
-# =============================
-
-data "cloudflare_zone" "this" {
-  name = var.root_domain_name
-}
-
-resource "cloudflare_record" "this" {
-  depends_on = [aws_cloudfront_distribution.this]
-
-  zone_id         = data.cloudflare_zone.this.id
-  name            = var.alias
-  value           = aws_cloudfront_distribution.this.domain_name
-  type            = "CNAME"
-  proxied         = false
-  allow_overwrite = true
 }
