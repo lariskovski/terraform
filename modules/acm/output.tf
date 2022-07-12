@@ -1,8 +1,7 @@
-
-# output "acm_certificate_domain_name" {
-#   value = aws_acm_certificate.this.domain_name
-# }
-
 output "acm_certificate_arn" {
   value = aws_acm_certificate.this.arn
+}
+
+output "domain_validation_options" {
+  value = aws_acm_certificate.this.domain_validation_options
 }
