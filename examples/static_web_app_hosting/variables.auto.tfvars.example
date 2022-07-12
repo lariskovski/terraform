@@ -1,0 +1,11 @@
+cloudflare_email     = "my@email.com"
+cloudflare_api_token = "TOKEN0I23I0EXAMPLE03OE0FO0"
+
+cloudfront_log_bucket = "bucket-logs"
+
+subdomain = "app.mydomain.com"
+
+root_domain_name = "mydomain.com"
+
+project_name = "static-super-app"
+region       = "us-east-1"
