@@ -1,0 +1,7 @@
+sg_default_id= ["sg-1111111", "sg-22222222"]
+subnet_id  = "subnet-1234"
+iam_instance_profile = "test-SSMInstanceProfile"
+
+project_name="testing"
+region="us-east-1"
+key_name = "secret-key"
